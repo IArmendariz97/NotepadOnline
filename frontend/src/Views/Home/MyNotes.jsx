@@ -11,7 +11,6 @@ import {
 } from "../../features/note/noteSlice";
 import { getCategories } from "../../features/category/categorySlice";
 import { showSuccessNotification } from "../../features/layout/layoutSlice";
-import { set } from "date-fns";
 
 const MyNotes = () => {
   const dispatch = useDispatch();
