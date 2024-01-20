@@ -1,12 +1,15 @@
 // noteService.js
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3001/backend/notes";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
+const BASE_URL = `${backendUrl}/notes`;
 
 const noteServices = {
   create: async (data) => {
     try {
       const response = await axios.post(BASE_URL, data);
+
       return response.data;
     } catch (error) {
       throw error.response.data;

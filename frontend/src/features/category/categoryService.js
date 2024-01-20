@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3001/backend/categories";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
+const BASE_URL = `${backendUrl}/categories`;
 
 const categoryServices = {
   create: async (data) => {
