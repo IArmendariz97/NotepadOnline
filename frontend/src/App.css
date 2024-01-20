@@ -1,0 +1,65 @@
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.textarea {
+  background-image: linear-gradient(
+      90deg,
+      rgb(102, 58, 43) 1px,
+      rgb(102, 58, 43) 1px
+    ),
+    linear-gradient(
+      rgb(62, 56, 2),
+      rgb(62, 56, 2) 23px,
+      rgb(48, 52, 54) 23px,
+      rgb(48, 52, 54) 24px,
+      rgb(62, 56, 2) 24px
+    );
+  background-size: 2px 100%, 100% 24px;
+  background-position: 78px top, left 0px;
+  background-repeat: no-repeat, repeat;
+  line-height: 24px !important;
+  background-attachment: local;
+  height: 100%;
+}
