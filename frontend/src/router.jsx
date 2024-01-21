@@ -17,7 +17,11 @@ const Router = () => {
         <Route
           path="/home"
           element={
-            Object.keys(user).length !== 0 ? <Home /> : <Navigate to="/" />
+            user && Object.keys(user).length !== 0 ? (
+              <Home />
+            ) : (
+              <Navigate to="/" />
+            )
           }
         />
       </Routes>
