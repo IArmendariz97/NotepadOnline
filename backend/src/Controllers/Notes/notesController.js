@@ -9,7 +9,7 @@ notesController.createNote = async (req, res) => {
     const { title, content, userId } = req.body;
 
     const newNote = await Notes.create({ title, content, userId });
-    res.status(201).json(newNote);
+    res.status(201).json({ note: newNote });
   } catch (error) {
     console.error(error);
     res.status(500).json({
