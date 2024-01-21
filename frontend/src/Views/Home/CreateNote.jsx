@@ -26,7 +26,6 @@ const CreateNote = () => {
       .finally(() => {
         setIsSubmitting(false);
       });
-    window.location.reload();
   };
 
   const clearMessage = () => {

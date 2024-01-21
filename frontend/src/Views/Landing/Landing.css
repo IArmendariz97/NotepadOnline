@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .background-image {
@@ -16,16 +17,39 @@
   height: 100%;
   background: url("../../assets/LandingBackground.jpg") center/cover no-repeat;
   opacity: 0.8;
+  transition: opacity 0.8s ease;
 }
 
 .content {
   text-align: center;
   z-index: 1;
   color: white;
+  transition: transform 1s ease, opacity 0.8s ease;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.modal {
+  transition: opacity 1.3s ease, transform 1.3s ease;
+  transform-style: preserve-3d;
 }

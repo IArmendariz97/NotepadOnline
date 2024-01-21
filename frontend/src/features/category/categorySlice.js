@@ -9,6 +9,8 @@ const initialState = {
   message: "",
 };
 
+// I LEAVE THIS HERE IN CASE I NEED TO DO A VIEW TO ADD OR DELETE CATEGORIES, MEANWHILE I CAN DO IT MANUALLY
+
 export const createCategory = createAsyncThunk(
   "createCategory",
   async (data, thunkAPI) => {

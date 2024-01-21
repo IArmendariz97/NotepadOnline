@@ -43,12 +43,12 @@ const Landing = () => {
   }, [message]);
 
   const showModal = () => {
-    setSignup(false); // Al abrir el modal, establecemos la vista en iniciar sesión
+    setSignup(false);
     setModalVisible(true);
   };
 
   const handleToggleView = () => {
-    setSignup(!isSignup); // Cambiamos entre crear cuenta e iniciar sesión
+    setSignup(!isSignup);
   };
 
   const handleCancel = () => {
@@ -65,10 +65,8 @@ const Landing = () => {
 
   return (
     <div className="landing-container">
-      {/* Fondo del componente */}
       <div className="background-image"></div>
 
-      {/* Contenido central */}
       <div className="content">
         ``
         <h1>Welcome to Your Notebook</h1>
@@ -77,7 +75,6 @@ const Landing = () => {
         </Button>
       </div>
 
-      {/* Modal para iniciar sesión o crear cuenta */}
       <Modal
         title={isSignup ? "Create an Account" : "Login"}
         visible={isModalVisible}

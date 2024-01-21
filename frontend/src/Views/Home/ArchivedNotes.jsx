@@ -1,8 +1,8 @@
 // ArchivedNotes.jsx
-import React, { useEffect } from "react";
+
 import { List, Button, message } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { getArchivedNotes, unarchiveNote } from "../../features/note/noteSlice";
+import { unarchiveNote } from "../../features/note/noteSlice";
 
 const ArchivedNotes = () => {
   const dispatch = useDispatch();

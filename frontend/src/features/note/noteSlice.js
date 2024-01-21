@@ -75,17 +75,6 @@ export const unarchiveNote = createAsyncThunk(
   }
 );
 
-export const getArchivedNotes = createAsyncThunk(
-  "getArchivedNotes",
-  async (_, thunkAPI) => {
-    try {
-      return await noteService.getArchived();
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error);
-    }
-  }
-);
-
 export const clearNoteMessage = createAction("clearNoteMessage");
 
 export const noteSlice = createSlice({
@@ -214,24 +203,6 @@ export const noteSlice = createSlice({
         );
       })
       .addCase(unarchiveNote.rejected, (state, action) => {
-        state.isLoading = false;
-        state.isSuccess = false;
-        state.isError = true;
-        state.message = action.payload.message;
-      })
-
-      // GET ARCHIVED NOTES
-      .addCase(getArchivedNotes.pending, (state) => {
-        state.isLoading = true;
-        state.message = "Fetching archived notes";
-      })
-      .addCase(getArchivedNotes.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.isSuccess = true;
-        state.isError = false;
-        state.notes = action.payload.archivedNotes;
-      })
-      .addCase(getArchivedNotes.rejected, (state, action) => {
         state.isLoading = false;
         state.isSuccess = false;
         state.isError = true;
