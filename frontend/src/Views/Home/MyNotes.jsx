@@ -115,6 +115,8 @@ const MyNotes = () => {
         )
       : notes;
 
+  const nonArchivedNotes = filteredNotes.filter((note) => !note.archived);
+
   return (
     <div>
       <h2>MY NOTES</h2>
@@ -144,7 +146,7 @@ const MyNotes = () => {
         <p style={{ color: "red" }}>{message}</p>
       ) : (
         <List
-          dataSource={filteredNotes}
+          dataSource={nonArchivedNotes}
           renderItem={(note, index) => (
             <List.Item
               style={{

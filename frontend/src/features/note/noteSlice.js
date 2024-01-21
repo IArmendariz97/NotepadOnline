@@ -93,6 +93,7 @@ export const noteSlice = createSlice({
         state.isSuccess = true;
         state.isError = false;
         state.message = action.payload.message;
+        state.notes.push(action.payload.note);
       })
       .addCase(createNote.rejected, (state, action) => {
         state.isLoading = false;
