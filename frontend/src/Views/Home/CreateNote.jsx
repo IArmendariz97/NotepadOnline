@@ -38,6 +38,7 @@ const CreateNote = () => {
       onFinish={onFinish}
       onValuesChange={clearMessage}
       className="textarea"
+      style={{ margin: "0 1vw" }}
     >
       <Form.Item
         name="title"
@@ -52,7 +53,6 @@ const CreateNote = () => {
             background: "transparent",
             border: "none",
             marginBottom: "2vh",
-            marginLeft: "1vw",
           }}
         />
       </Form.Item>
